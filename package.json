@@ -1,6 +1,6 @@
 {
   "name": "p2-camera-connection",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Package to control Panasonic Cameras via the Panasonic P2 Protocol",
   "main": "build/index.js",
   "types": "build/index.d.ts",

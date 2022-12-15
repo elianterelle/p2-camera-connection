@@ -63,14 +63,6 @@ export class CamCtlCommands {
         this.sendRaw(`$Menu:=OnOff`);
     }
 
-    public changeFocus(change: 1 | -1) {
-        this.sendRaw(`$FcStep:${this.numberToSignedString(change)}`);
-    }
-
-    public changeZoom(change: 1 | -1) {
-        this.sendRaw(`$ZmStep:${this.numberToSignedString(change)}`);
-    }
-
     public sendMenuCommand(command: 'UP' | 'DOWN' | 'LEFT' | 'RIGHT' | 'SET' | 'EXIT') {
         const cmd = {
             UP: 'Up',
@@ -82,6 +74,22 @@ export class CamCtlCommands {
         }[command];
 
         this.sendRaw(`$Menu${cmd}:t`);
+    }
+
+    public changeFocus(change: 1 | -1) {
+        this.sendRaw(`$FcStep:${this.numberToSignedString(change)}`);
+    }
+
+    public changeZoom(change: 1 | -1) {
+        this.sendRaw(`$ZmStep:${this.numberToSignedString(change)}`);
+    }
+
+    public setFocusSpeed(value: number) {
+        this.sendRaw(`$FcSpd:=${value}`);
+    }
+
+    public setZoomSpeed(value: number) {
+        this.sendRaw(`$ZmSpd:=${value}`);
     }
 
     public sendRaw(cmd: string) {
