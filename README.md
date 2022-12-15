@@ -90,4 +90,4 @@ function test() {
 
 ## Documentation
 
-Generated docs can be found in /docs/.
+Generated docs can be found [here](https://elianterelle.github.io/p2-camera-connection/).
