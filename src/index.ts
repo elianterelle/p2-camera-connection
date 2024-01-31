@@ -375,6 +375,7 @@ export class P2CameraConnection extends EventEmitter<P2Events> {
         const rcName = {
             'HC-X2': 'RC_SemiProApp_NodeJS',
             'HC-X20': 'RC_SemiProApp_NodeJS',
+            'AG-CX10': 'RC_AllianceApp',
             'CX350': 'RC_AllianceApp',
             'EVA1': 'RC_AllianceApp'
         }[this.envInfo.device.modelName] ?? 'RC_P2Package_NodeJS';
